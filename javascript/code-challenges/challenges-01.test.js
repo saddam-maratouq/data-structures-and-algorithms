@@ -35,9 +35,21 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
+describe('Testing challenge 2', () => {
+  test('It should return an array with an exclamation point added to each value of the original array', () => {
+    expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
+  });
+});
+
 
 const addExclamation = (arr) => {
   // Solution code here...
+  let newArr =[]
+  arr.forEach((string)=>{
+let newString = string+'!'
+      newArr.push(newString)
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,9 +59,22 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
+describe('Testing challenge 3', () => {
+  test('It should return an array of uppercase strings', () => {
+    expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
+  });
+});
+
+
 
 const allUpperCase = (arr) => {
   // Solution code here...
+  let newArr =[]
+ arr.forEach(string=> {
+   
+  newArr.push(string.toUpperCase())
+ });
+ return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,17 +172,9 @@ Run your tests from the console: jest challenges-01.test.js
 
 
 
-describe('Testing challenge 2', () => {
-  test('It should return an array with an exclamation point added to each value of the original array', () => {
-    expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
-  });
-});
 
-describe('Testing challenge 3', () => {
-  test('It should return an array of uppercase strings', () => {
-    expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
-  });
-});
+
+
 
 describe('Testing challenge 4', () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
