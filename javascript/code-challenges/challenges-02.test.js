@@ -163,7 +163,8 @@ describe('Testing challenge 6', () => {
 const mapTwoToThe = (arr) => {
   // Solution code here...
 
-  
+  let NewArr = arr.map ((item)=>     Math.pow( 2,item )        )
+  return NewArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
