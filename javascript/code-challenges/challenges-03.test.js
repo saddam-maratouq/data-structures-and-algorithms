@@ -146,11 +146,21 @@ describe('Testing challenge 5', () => {
 });
 
 
-
-
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+
+  const intersection = arr.filter(function(item) {
+    return !forbiddenValues.includes(item); 
+  })
+
+  return intersection ;
+
+
+
 };
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
