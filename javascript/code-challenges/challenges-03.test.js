@@ -162,6 +162,7 @@ const notInFirstArray = (forbiddenValues, arr) => {
 
 
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
