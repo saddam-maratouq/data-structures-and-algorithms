@@ -93,7 +93,8 @@ const isNum = (input) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+Write a function named containsWorld that takes in a string or number of any length. This function should use a 
+regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -111,7 +112,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
- 
+  const regex = /\b[A-Z][a-z]+/g;
+  return str.match(regex) || [];
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -120,7 +122,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  return arr.filter((val) => /^[A-J]/.test(val));
 };
 
 /* ------------------------------------------------------------------------------------------------
