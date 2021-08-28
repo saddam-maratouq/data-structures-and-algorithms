@@ -83,8 +83,16 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
-};
+  let odd = '';
+  str.split('').map((item, idx) => {
+    if (idx % 2 !== 0) {
+      odd = odd + item;
 
+    }
+  });
+  return odd;
+};
+    
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
@@ -93,7 +101,17 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let newArr = arr;
+  let filterdArr = arr.filter(item => {
+    return item.includes(':)');
+  })
+  if (newArr.length === filterdArr.length) {
+    return true;
+  } else {
+    return false;
+  }
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
